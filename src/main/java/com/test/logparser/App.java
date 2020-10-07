@@ -27,10 +27,11 @@ public final class App {
     }
 
     /**
-     * @param args Should be a path to input file.
+     * @param args Should be a path to input file. 
+     * Or specify the absolute path to input file.
      */
     public static void main(String[] args) throws SQLException {
-        String filePath = "/Users/gj8bpn/Desktop/Code/Java/logfile.txt"; // args[0];
+        String filePath = args[0]; // "/Users/gj8bpn/Desktop/Code/Java/logfile.txt"; 
         System.out.println(filePath);
         List<Output> output = parseJsonLineByLine(filePath);
         processData(output);
